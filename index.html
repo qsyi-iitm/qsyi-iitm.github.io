@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>QSYI | Quantum Symposium for Young Investigators</title>
+<meta name="description" content="The Quantum Symposium for Young Investigators (QSYI) at IIT Madras, Chennai. QSYI 2027: March 15 to 19, 2027. QSYI 2025: March 7 and 8, 2025.">
+<link rel="icon" href="assets/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://qsyi-iitm.github.io/">
+<meta property="og:title" content="QSYI | Quantum Symposium for Young Investigators">
+<meta property="og:description" content="A symposium series for early-career researchers in quantum science and technology at IIT Madras, Chennai.">
+<meta property="og:image" content="https://qsyi-iitm.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://qsyi-iitm.github.io/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: only light;
+    --navy: #1d2a5c; --ink: #1b1f2a; --muted: #5b6178; --line: #e3e6ef; --soft: #f4f5f9;
+    --red: #962318; --gold: #dcc08a;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--soft); line-height: 1.6;
+    display: flex; flex-direction: column; min-height: 100vh;
+  }
+  a { color: inherit; }
+  main { flex: 1; width: 100%; max-width: 1000px; margin: 0 auto; padding: 3.2rem 1.5rem 3rem; }
+
+  /* Title */
+  .intro { text-align: center; margin-bottom: 2.4rem; }
+  .intro img { height: 92px; width: auto; display: block; margin: 0 auto 1.2rem; }
+  .intro h1 {
+    font-family: "Source Serif 4", Georgia, serif; font-weight: 700; color: var(--ink);
+    font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.15; margin: 0;
+  }
+  .intro h1::after { content: ""; display: block; width: 48px; height: 3px; background: var(--red); margin: 0.9rem auto 0; }
+  .intro p { color: var(--muted); max-width: 640px; margin: 1rem auto 0; font-size: 1.05rem; }
+  .intro p a { color: var(--navy); font-weight: 500; text-underline-offset: 3px; text-decoration-color: rgba(29, 42, 92, 0.35); }
+
+  /* Edition banners */
+  .editions { display: grid; gap: 1.4rem; }
+  .edition {
+    position: relative; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    min-height: 230px; padding: 2rem 2.4rem; border-radius: 14px; overflow: hidden;
+    color: #fff; text-decoration: none;
+    box-shadow: 3px 4px 14px rgba(20, 25, 60, 0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+  .edition:hover { transform: translateY(-3px) scale(1.01); box-shadow: 6px 10px 26px rgba(20, 25, 60, 0.28); }
+  .edition.e2027 {
+    background:
+      linear-gradient(90deg, rgba(5, 8, 32, 0.97) 0%, rgba(5, 8, 32, 0.88) 45%, rgba(5, 8, 32, 0.3) 100%),
+      #0b1240 url("assets/banner-2027.jpg") center / cover no-repeat;
+  }
+  .edition.e2025 {
+    background:
+      linear-gradient(90deg, rgba(20, 5, 7, 0.97) 0%, rgba(20, 5, 7, 0.88) 45%, rgba(20, 5, 7, 0.3) 100%),
+      #2a0a0c url("assets/banner-2025.jpg") center / cover no-repeat;
+  }
+  .edition .text { max-width: 560px; }
+  .eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+  .edition h2 {
+    font-family: "Source Serif 4", Georgia, serif; font-weight: 700;
+    font-size: clamp(2rem, 5vw, 2.9rem); line-height: 1.1; margin: 0.35rem 0 0.4rem; color: #fff;
+  }
+  .meta { color: #dfe1ec; font-size: 1.05rem; }
+  .edition.e2025 .meta { color: #ecdcda; }
+  .btn {
+    flex: none; display: inline-block; background: #fff; color: var(--navy);
+    font-weight: 600; padding: 0.7rem 1.3rem; border-radius: 6px; white-space: nowrap;
+  }
+  .edition.e2025 .btn { color: var(--red); }
+  .badge {
+    display: inline-block; margin-left: 0.6rem; padding: 0.1rem 0.55rem; border-radius: 4px;
+    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    background: #fff; color: var(--navy); vertical-align: 0.15em;
+  }
+
+  footer { background: #0d1446; color: #c9cdea; font-size: 0.92rem; }
+  footer .inner {
+    max-width: 1000px; margin: 0 auto; padding: 1.2rem 1.5rem;
+    display: flex; justify-content: center; gap: 0.6rem 1.5rem; flex-wrap: wrap;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 640px) {
+    main { padding-top: 2.2rem; }
+    .intro img { height: 70px; }
+    .edition { flex-direction: column; align-items: flex-start; min-height: 0; padding: 1.6rem 1.4rem; }
+    .edition.e2027, .edition.e2025 { background-position: center; }
+    .edition.e2027 { background-image: linear-gradient(rgba(5, 8, 32, 0.86), rgba(5, 8, 32, 0.86)), url("assets/banner-2027.jpg"); }
+    .edition.e2025 { background-image: linear-gradient(rgba(20, 5, 7, 0.86), rgba(20, 5, 7, 0.86)), url("assets/banner-2025.jpg"); }
+    footer .inner { flex-direction: column; text-align: center; align-items: center; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <section class="intro">
+    <img src="assets/qsyi-logo.png" alt="QSYI logo">
+    <h1>Quantum Symposium for Young Investigators</h1>
+    <p>A symposium series for <strong>early-career researchers</strong> in quantum science and technology, hosted by the <a href="https://quantum.iitm.ac.in/home">Center for Quantum Information, Communication and Computing (CQuICC)</a>, IIT Madras.</p>
+  </section>
+
+  <div class="editions">
+    <a class="edition e2027" href="https://qsyi-iitm.github.io/2027/">
+      <div class="text">
+        <div class="eyebrow">Second edition <span class="badge">Upcoming</span></div>
+        <h2>QSYI 2027</h2>
+        <div class="meta">March 15 to 19, 2027 &nbsp;·&nbsp; IIT Madras, Chennai</div>
+      </div>
+      <span class="btn">Visit the QSYI 2027 website &rarr;</span>
+    </a>
+
+    <a class="edition e2025" href="https://sites.google.com/physics.iitm.ac.in/qsyi-2025/">
+      <div class="text">
+        <div class="eyebrow">First edition</div>
+        <h2>QSYI 2025</h2>
+        <div class="meta">March 7 and 8, 2025 &nbsp;·&nbsp; IIT Madras, Chennai</div>
+      </div>
+      <span class="btn">Visit the QSYI 2025 website &rarr;</span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="inner">
+    <span>© 2026 <a href="https://quantum.iitm.ac.in/home">CQuICC</a>, IIT Madras</span>
+  </div>
+</footer>
+</body>
+</html>
