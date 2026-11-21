@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qsyi-iitm.github.io/sitemap.xml
+Sitemap: https://qsyi-iitm.github.io/2027/sitemap.xml
